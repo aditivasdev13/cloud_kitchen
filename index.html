@@ -3,264 +3,246 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Charu's Kitchen Menu</title>
+<title>Your Restaurant</title>
 
 <style>
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#fff6f2;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #0f0f0f;
+    color: #fff;
 }
 
-header{
-background:linear-gradient(45deg,#8b0000,#c62828);
-color:white;
-text-align:center;
-padding:25px;
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
 }
 
-header h1{
-margin:0;
-font-size:34px;
-letter-spacing:1px;
+.header img {
+    width: 80px;
+    border-radius: 50%;
 }
 
-header p{
-margin:5px;
-font-size:16px;
+.header h1 {
+    margin: 10px 0 5px;
 }
 
-.container{
-padding:20px;
-max-width:900px;
-margin:auto;
+.header p {
+    margin: 0;
+    font-size: 14px;
 }
 
-.category{
-font-size:22px;
-margin-top:30px;
-color:#8b0000;
-border-bottom:3px solid #ff9800;
-display:inline-block;
-padding-bottom:5px;
+/* CONTAINER */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
-.menu{
-margin-top:15px;
-background:white;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-overflow:hidden;
+.section {
+    margin-top: 30px;
 }
 
-.item{
-display:flex;
-justify-content:space-between;
-padding:14px 18px;
-border-bottom:1px solid #eee;
-font-size:16px;
+.section h2 {
+    color: #ff9800;
+    border-left: 5px solid #ff9800;
+    padding-left: 10px;
 }
 
-.item:last-child{
-border-bottom:none;
+/* GRID */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
 }
 
-.price{
-font-weight:bold;
-color:#e65100;
+/* CARD */
+.card {
+    background: #1c1c1c;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.footer{
-margin-top:30px;
-background:#8b0000;
-color:white;
-text-align:center;
-padding:20px;
+.card:hover {
+    transform: scale(1.03);
 }
 
-.call{
-font-size:18px;
-margin:8px 0;
+.item-name {
+    font-weight: bold;
+    font-size: 16px;
 }
 
-.address{
-font-size:15px;
+.desc {
+    font-size: 13px;
+    color: #ccc;
 }
 
-.zomato{
-margin-top:10px;
-font-weight:bold;
-color:#ffcccb;
+.price {
+    color: #4caf50;
+    font-weight: bold;
+    margin-top: 5px;
 }
-
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Charu's Kitchen</h1>
-<p>Authentic North Indian Homemade Taste</p>
-</header>
+<!-- HEADER -->
+<div class="header">
+    <img src="logo.png" alt="logo">
+    <h1>Charu's Kitchen</h1>
+    <p>Ghar jaisa swad | Fresh & Hygienic</p>
+</div>
 
 <div class="container">
 
-<div class="category">🥙 Paratha</div>
+<!-- RECOMMENDED -->
+<div class="section">
+<h2>⭐ Recommended</h2>
+<div class="menu-grid">
 
-<div class="menu">
+<div class="card"><div class="item-name">Paneer Bhurji + 3 Roti Combo</div><div class="desc">Rich paneer bhurji with soft rotis</div><div class="price">₹149</div></div>
 
-<div class="item">
-<span>Aloo Paratha</span>
-<span class="price">₹39</span>
-</div>
+<div class="card"><div class="item-name">Rajma Chawal</div><div class="desc">Classic rajma with steamed rice</div><div class="price">₹119</div></div>
 
-<div class="item">
-<span>Pyaj Paratha</span>
-<span class="price">₹39</span>
-</div>
+<div class="card"><div class="item-name">Chole Chawal</div><div class="desc">Spicy chole with rice</div><div class="price">₹109</div></div>
 
-<div class="item">
-<span>Aloo Pyaj Paratha</span>
-<span class="price">₹39</span>
-</div>
+<div class="card"><div class="item-name">Regular Thali</div><div class="desc">3 roti + 1 sabji + dal + rice + salad</div><div class="price">₹149</div></div>
 
-<div class="item">
-<span>Gobhi Paratha</span>
-<span class="price">₹45</span>
-</div>
-
-<div class="item">
-<span>Paneer Paratha</span>
-<span class="price">₹59</span>
-</div>
+<div class="card"><div class="item-name">Special Thali</div><div class="desc">4 roti + dal + malai pyaj + rice + salad</div><div class="price">₹199</div></div>
 
 </div>
-
-
-<div class="category">🍚 Rice</div>
-
-<div class="menu">
-
-<div class="item">
-<span>Plain Rice (Half)</span>
-<span class="price">₹70</span>
 </div>
 
-<div class="item">
-<span>Plain Rice (Full)</span>
-<span class="price">₹130</span>
-</div>
+<!-- COMBOS -->
+<div class="section">
+<h2>🔥 Combos</h2>
+<div class="menu-grid">
 
-<div class="item">
-<span>Jeera Rice (Half)</span>
-<span class="price">₹80</span>
-</div>
+<div class="card"><div class="item-name">Breakfast Combo</div><div class="desc">Paratha + chai</div><div class="price">₹59</div></div>
 
-<div class="item">
-<span>Jeera Rice (Full)</span>
-<span class="price">₹140</span>
-</div>
+<div class="card"><div class="item-name">2 Paratha + Chai</div><div class="desc">2 paratha + chai</div><div class="price">₹79</div></div>
 
-<div class="item">
-<span>Pyaj Chawal (Half)</span>
-<span class="price">₹85</span>
-</div>
+<div class="card"><div class="item-name">Paratha + Boondi Raita</div><div class="desc">Paratha with raita</div><div class="price">₹69</div></div>
 
-<div class="item">
-<span>Pyaj Chawal (Full)</span>
-<span class="price">₹160</span>
-</div>
+<div class="card"><div class="item-name">Jeera Aloo + 3 Roti</div><div class="desc">Jeera aloo with roti</div><div class="price">₹119</div></div>
+
+<div class="card"><div class="item-name">Paneer Bhurji + 3 Roti</div><div class="desc">Paneer bhurji combo</div><div class="price">₹149</div></div>
+
+<div class="card"><div class="item-name">Rice + Dal</div><div class="desc">Dal with rice</div><div class="price">₹99</div></div>
+
+<div class="card"><div class="item-name">Rajma Chawal</div><div class="desc">Rajma with rice</div><div class="price">₹119</div></div>
+
+<div class="card"><div class="item-name">Chole Chawal</div><div class="desc">Chole with rice</div><div class="price">₹109</div></div>
 
 </div>
-
-
-<div class="category">🥘 Sabji</div>
-
-<div class="menu">
-
-<div class="item">
-<span>Aloo Sabji (Half)</span>
-<span class="price">₹80</span>
 </div>
 
-<div class="item">
-<span>Aloo Sabji (Full)</span>
-<span class="price">₹150</span>
-</div>
+<!-- THALI -->
+<div class="section">
+<h2>🥗 Thali</h2>
+<div class="menu-grid">
 
-<div class="item">
-<span>Jeera Aloo</span>
-<span class="price">₹99</span>
-</div>
+<div class="card"><div class="item-name">Budget Thali</div><div class="desc">2 roti + aloo sabji + dal + salad</div><div class="price">₹99</div></div>
 
-<div class="item">
-<span>Malai Pyaj</span>
-<span class="price">₹89</span>
-</div>
+<div class="card"><div class="item-name">Classic Thali</div><div class="desc">3 roti + 1 sabji + dal + rice + salad</div><div class="price">₹149</div></div>
 
-</div>
+<div class="card"><div class="item-name">Premium Thali</div><div class="desc">4 roti + dal + malai pyaj + rice + salad</div><div class="price">₹199</div></div>
 
+<div class="card"><div class="item-name">Puri Sabji Thali</div><div class="desc">5 puri + aloo sabji + salad</div><div class="price">₹129</div></div>
 
-<div class="category">🍽 Special</div>
-
-<div class="menu">
-
-<div class="item">
-<span>5 Puri + Aloo Sabji</span>
-<span class="price">₹99</span>
-</div>
-
-<div class="item">
-<span>Boondi</span>
-<span class="price">₹99</span>
-</div>
-
-<div class="item">
-<span>Daal Batti (5 Batti + Daal)</span>
-<span class="price">₹239</span>
-</div>
+<div class="card"><div class="item-name">Dal Batti Thali</div><div class="desc">5 batti + dal + churma</div><div class="price">₹249</div></div>
 
 </div>
-
-
-<div class="category">☕ Chai</div>
-
-<div class="menu">
-
-<div class="item">
-<span>Milk Tea</span>
-<span class="price">₹19</span>
 </div>
 
-<div class="item">
-<span>Adrak Chai</span>
-<span class="price">₹25</span>
+<!-- PARATHA -->
+<div class="section">
+<h2>🫓 Paratha</h2>
+<div class="menu-grid">
+
+<div class="card"><div class="item-name">Aloo Paratha</div><div class="desc">Stuffed potato paratha</div><div class="price">₹39</div></div>
+
+<div class="card"><div class="item-name">Pyaj Paratha</div><div class="desc">Onion stuffed paratha</div><div class="price">₹39</div></div>
+
+<div class="card"><div class="item-name">Aloo Pyaj Paratha</div><div class="desc">Mixed stuffing</div><div class="price">₹39</div></div>
+
+<div class="card"><div class="item-name">Gobhi Paratha</div><div class="desc">Cauliflower stuffing</div><div class="price">₹45</div></div>
+
+<div class="card"><div class="item-name">Paneer Paratha</div><div class="desc">Paneer stuffing</div><div class="price">₹59</div></div>
+
+</div>
 </div>
 
-<div class="item">
-<span>Elaichi Chai</span>
-<span class="price">₹25</span>
+<!-- ROTI -->
+<div class="section">
+<h2>🫓 Roti</h2>
+<div class="menu-grid">
+<div class="card"><div class="item-name">Tawa Roti</div><div class="desc">Soft wheat roti</div><div class="price">₹12</div></div>
+<div class="card"><div class="item-name">Butter Tawa Roti</div><div class="desc">Roti with butter</div><div class="price">₹18</div></div>
+</div>
 </div>
 
-</div>
+<!-- SABJI -->
+<div class="section">
+<h2>🍛 Sabji</h2>
+<div class="menu-grid">
+
+<div class="card"><div class="item-name">Aloo Sabji</div><div class="desc">Half ₹80 | Full ₹150</div></div>
+<div class="card"><div class="item-name">Jeera Aloo</div><div class="price">₹99</div></div>
+<div class="card"><div class="item-name">Malai Pyaj</div><div class="price">₹89</div></div>
+<div class="card"><div class="item-name">Boondi Sabji</div><div class="price">₹99</div></div>
+<div class="card"><div class="item-name">Paneer Bhurji</div><div class="price">₹129</div></div>
+<div class="card"><div class="item-name">Chole</div><div class="price">₹99</div></div>
+<div class="card"><div class="item-name">Rajma</div><div class="price">₹109</div></div>
+<div class="card"><div class="item-name">Kale Chane</div><div class="price">₹89</div></div>
 
 </div>
-
-
-<div class="footer">
-
-<div class="call">
-📞 Call / WhatsApp: 8949940749 | 9828694552
 </div>
 
-<div class="address">
-📍 1163 GBP Crest, Near Toll Plaza
+<!-- RICE -->
+<div class="section">
+<h2>🍚 Rice</h2>
+<div class="menu-grid">
+
+<div class="card"><div class="item-name">Plain Rice</div><div class="desc">Half ₹70 | Full ₹130</div></div>
+<div class="card"><div class="item-name">Jeera Rice</div><div class="desc">Half ₹80 | Full ₹140</div></div>
+<div class="card"><div class="item-name">Pyaj Chawal</div><div class="desc">Half ₹85 | Full ₹160</div></div>
+
+</div>
 </div>
 
-<div class="zomato">
-Available on Zomato
+<!-- RAITA -->
+<div class="section">
+<h2>🥣 Raita</h2>
+<div class="menu-grid">
+<div class="card"><div class="item-name">Mix Veg Raita</div><div class="price">₹79</div></div>
+<div class="card"><div class="item-name">Boondi Raita</div><div class="price">₹69</div></div>
+</div>
+</div>
+
+<!-- TEA -->
+<div class="section">
+<h2>☕ Tea</h2>
+<div class="menu-grid">
+<div class="card"><div class="item-name">Milk Tea</div><div class="price">₹19</div></div>
+<div class="card"><div class="item-name">Adrak Chai</div><div class="price">₹25</div></div>
+<div class="card"><div class="item-name">Elaichi Chai</div><div class="price">₹25</div></div>
+</div>
+</div>
+
+<!-- ADD-ONS -->
+<div class="section">
+<h2>➕ Add-ons</h2>
+<div class="menu-grid">
+<div class="card"><div class="item-name">Extra Butter</div><div class="price">₹10</div></div>
+<div class="card"><div class="item-name">Extra Roti</div><div class="price">₹10</div></div>
+<div class="card"><div class="item-name">Extra Salad</div><div class="price">₹20</div></div>
+</div>
 </div>
 
 </div>
